@@ -1,6 +1,7 @@
 import transformers
+import torch 
 
-DEVICE = "cuda"
+DEVICE = "cuda" if torch.cuda.is_available() else "gpu"
 MAX_LEN = 512
 TRAIN_BATCH_SIZE = 3
 VALID_BATCH_SIZE = 1
